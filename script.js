@@ -1,6 +1,6 @@
 let winner
 let choice_list=["rock", "paper", "scissors"];
-
+let bestOf5 = 0
 function getComputerChoice(){
     let choice=choice_list[Math.floor(Math.random()*3)];
     return choice;
@@ -9,8 +9,8 @@ function getComputerChoice(){
 function getPlayerChoice(){
     let choice
     while (true){
-        choice=toLowerCase(prompt("Rock, Paper, or Scissors?: "))
-        if (choice == "rock", "paper", "scisssors"){
+        choice=prompt("Rock, Paper, or Scissors?: ").toLowerCase()
+        if (choice == "rock" || choice== "paper" || choice== "scisssors"){
             break 
         }
     }
@@ -46,4 +46,27 @@ function playRound(playerSelection, computerSelection){
     }
     return winner;
 }
+
+function game(){
+    for (let i=0; i<5; i++){
+        if (playRound(getPlayerChoice(), getComputerChoice())=="computer"){
+            bestOf5--;
+            console.log("Computer wins round "+i+1)
+            
+        }
+        else {
+            bestOf5++;
+            console.log("Player wins round "+i+1)
+        }
+    }
+    if (bestOf5>0){
+        console.log("Player Wins!")
+    }
+    else{
+        console.log("Computer Wins!")
+    }
+}
+
+game()
+
 
