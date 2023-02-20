@@ -2,7 +2,7 @@ let winner
 let choice_list=["rock", "paper", "scissors"];
 let bestOf5 = 0
 function getComputerChoice(){
-    let choice=choice_list[Math.floor(Math.random()*3)];
+    let choice=choice_list[Math.floor(Math.random()*2.999999)];
     return choice;
 }
 
@@ -44,9 +44,24 @@ function playRound(playerSelection, computerSelection){
             winner="computer"
         }
     }
+    console.log("player: "+playerSelection + " Computer: "+
+    computerSelection+" Winner: "+winner)
     return winner;
 }
+const rock = document.getElementById("rock");
+rock.addEventListener('click', (e) =>{
+    playRound("rock",getComputerChoice())
+});
+const paperDiv = document.getElementById("paper");
+paperDiv.addEventListener("click", (e)=>{
+    playRound("paper",getComputerChoice())
+});
+const scissorsDiv = document.getElementById("scissors");
+scissorsDiv.addEventListener("click", (e)=>{
+    playRound("scissors",getComputerChoice())
+});
 
+/*
 function game(){
     for (let i=0; i<5; i++){
         if (playRound(getPlayerChoice(), getComputerChoice())=="computer"){
@@ -66,7 +81,7 @@ function game(){
         console.log("Computer Wins!")
     }
 }
-
-game()
+*/
+//game()
 
 
