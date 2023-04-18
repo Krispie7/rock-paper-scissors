@@ -61,27 +61,4 @@ scissorsDiv.addEventListener("click", (e)=>{
     playRound("scissors",getComputerChoice())
 });
 
-/*
-function game(){
-    for (let i=0; i<5; i++){
-        if (playRound(getPlayerChoice(), getComputerChoice())=="computer"){
-            bestOf5--;
-            console.log("Computer wins round "+i+1)
-            
-        }
-        else {
-            bestOf5++;
-            console.log("Player wins round "+i+1)
-        }
-    }
-    if (bestOf5>0){
-        console.log("Player Wins!")
-    }
-    else{
-        console.log("Computer Wins!")
-    }
-}
-*/
-//game()
-
 
