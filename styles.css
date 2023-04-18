@@ -8,7 +8,7 @@ body{
     height:100vh;
     width:100vw;
     background: linear-gradient(black 15%, rgb(41, 41, 41) );
-    padding:5rem
+    padding:5rem;
 }
 
 h1{
@@ -16,6 +16,11 @@ h1{
     text-align: center;
     height: 5rem;
     font-size: 48px;
+}
+
+#results{
+    color:white;
+    text-align: center;
 }
 
 #container{

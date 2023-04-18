@@ -1,6 +1,9 @@
 let winner
 let choice_list=["rock", "paper", "scissors"];
 let bestOf5 = 0
+const results=document.getElementById("results")
+
+
 function getComputerChoice(){
     let choice=choice_list[Math.floor(Math.random()*2.999999)];
     return choice;
@@ -44,8 +47,14 @@ function playRound(playerSelection, computerSelection){
             winner="computer"
         }
     }
-    console.log("player: "+playerSelection + " Computer: "+
-    computerSelection+" Winner: "+winner)
+    if (winner!="tie"){
+        results.innerHTML="Player has chosen <span style='color:green;'>"+playerSelection + "</span>, Computer has chosen <span style='color:red;'>" +
+        computerSelection+ "</span>!<br>The <strong>" + winner + "</strong> has won!"
+    }
+    else{
+        results.innerHTML="Player has chosen <span style='color:green;'>"+playerSelection + "</span>, Computer has chosen <span style='color:red;'>" +
+        computerSelection+ "</span>!<br>It is a <strong>Tie</strong>!"
+    }
     return winner;
 }
 const rock = document.getElementById("rock");
