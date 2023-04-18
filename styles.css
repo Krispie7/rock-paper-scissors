@@ -1,19 +1,25 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 body{
-    background-color: black;
+    height:100vh;
+    width:100vw;
+    background: linear-gradient(black 15%, rgb(41, 41, 41) );
 }
 
 h1{
     color:white;
     text-align: center;
     height: 275px;
-    justify-content: center;
     line-height: 275px;
     font-size: 48px;
 }
 
 #container{
     display: flex;
-    flex-direction: row;
     justify-content: center;
 }
 .choiceContainer{
