@@ -8,19 +8,23 @@ body{
     height:100vh;
     width:100vw;
     background: linear-gradient(black 15%, rgb(41, 41, 41) );
+    padding:5rem
 }
 
 h1{
     color:white;
     text-align: center;
-    height: 275px;
-    line-height: 275px;
+    height: 5rem;
     font-size: 48px;
 }
 
 #container{
     display: flex;
     justify-content: center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
 }
 .choiceContainer{
     position:relative;
